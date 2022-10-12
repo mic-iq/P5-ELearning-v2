@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Progress_Unit_Per_Response__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Progress Unit Per Response</label>
+    <referenceTo>Progress_Unit_Per_Response__c</referenceTo>
+    <relationshipLabel>Answers For Progresses</relationshipLabel>
+    <relationshipName>Answers_For_Progresses</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

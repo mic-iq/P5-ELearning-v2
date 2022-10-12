@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>aprendizaje</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>App para Alumnos</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>E-Learning Alumno</label>
+    <navType>Standard</navType>
+    <tabs>Profile</tabs>
+    <tabs>Trail__c</tabs>
+    <tabs>Module__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>App_para_Alumnos_UtilityBar</utilityBar>
+</CustomApplication>

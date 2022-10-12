@@ -1,0 +1,23 @@
+<template>
+    <lightning-card if:true={unit}>
+         
+         <h3 slot="title">
+                <span><lightning-icon icon-name="standard:agent_session" size="small"></lightning-icon>{unit.Name}</span>  
+        </h3>
+        
+            
+        <p class="slds-p-horizontal_small">Content: </p>
+        
+    </lightning-card>
+   
+
+        <template if:true={questionList} for:each={questionList} for:item="question">
+              
+            <c-question-view  key={question.Id} question={question} question-list={questionList} unit-id={recordId}>
+        </c-question-view> 
+        
+        </template>
+         
+    
+  
+</template>

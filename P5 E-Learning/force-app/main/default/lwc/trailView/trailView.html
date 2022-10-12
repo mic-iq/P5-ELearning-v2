@@ -1,0 +1,23 @@
+<template>
+    <lightning-card if:true={trail}>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:stage" size="medium"></lightning-icon>
+             {trail.Name}
+             
+        </h3>
+        <lightning-progress-bar value={progressTrail} size="large"></lightning-progress-bar>
+        <p class="slds-p-horizontal_small">Description: {trail.Description__c}</p>
+        <p class="slds-p-horizontal_small">Estimated Time: {trail.Total_Time__c} minutes</p>
+        <p class="slds-p-horizontal_small">Trail Points: {trail.Total_Score__c} points</p>
+
+    </lightning-card>
+    <lightning-card variant="Narrow" title="MODULES" icon-name="standard:dataset">
+
+        <template if:true={modulesList} for:each={modulesList} for:item="module">
+        <c-module-view key={module.Id} module={module} passed-module-ids={passedModuleIds} passed-units-ids={passedUnitsIds}>
+        </c-module-view> 
+        </template>
+            
+    </lightning-card>
+  
+</template>

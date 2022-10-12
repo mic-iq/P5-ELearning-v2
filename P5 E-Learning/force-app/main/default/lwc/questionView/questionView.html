@@ -1,0 +1,16 @@
+<template>
+        
+    <lightning-card> <h3>{question.Question_Content__c}</h3></lightning-card>
+   
+    
+    <template if:true={question.Options__r} for:each={question.Options__r} for:item="option">
+
+            <c-option-view  key={option.Id} option={option} question={question} onoptionselect={handleOption} options-selected={optionsSelected}>
+            </c-option-view> 
+
+    </template>
+
+<lightning-button label="Submit" onclick={handleSubmit}></lightning-button> 
+    
+
+</template>

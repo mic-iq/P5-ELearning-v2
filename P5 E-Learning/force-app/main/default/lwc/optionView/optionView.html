@@ -1,0 +1,20 @@
+<template>
+    <lightning-card if:true={question}>
+        <h3 slot="title" class="slds-p-horizontal_large">
+            
+            <lightning-icon icon-name="utility:chevronright" size="xx-small" ></lightning-icon>
+            
+            <!-- <template if:true={passedModuleIds}> -->
+           <!--  <lightning-icon icon-name={checkIcon} size="x-small"></lightning-icon> -->
+            <!-- </template> style="color:purple-->
+        </h3>
+        <p onclick={selectOption} class={optionClass}>{option.Option_Content__c}</p>
+        
+        
+
+      
+                    
+    </lightning-card>
+     
+    
+    </template>

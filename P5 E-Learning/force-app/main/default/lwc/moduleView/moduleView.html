@@ -1,0 +1,28 @@
+<template>
+    <lightning-card if:true={module}>
+        <h3 slot="title" class="slds-p-horizontal_large">
+            
+            <lightning-icon icon-name="standard:dataset" size="small" ></lightning-icon>
+           {module.Name}
+            <!-- <template if:true={passedModuleIds}> -->
+            <lightning-icon icon-name={checkIcon} size="x-small"></lightning-icon>
+            <!-- </template> style="color:purple-->
+            
+        </h3>
+        
+        <p class="slds-p-horizontal_small">Description: {module.Description__c}</p>
+        <p class="slds-p-horizontal_small">Estimated Time: {module.Estimated_Module_Time__c} minutes</p>
+        <p class="slds-p-horizontal_small">Module Points: {module.Score__c} points</p>
+                      
+    
+    </lightning-card>
+     
+    <lightning-card variant="Narrow" title="UNITS" icon-name="standard:choice">  
+        <template if:true={module.Units__r} for:each={module.Units__r} for:item="unit">
+        <c-unit-view key={unit.Id} unit={unit} passed-units-ids={passedUnitsIds}></c-unit-view> 
+        
+        </template> 
+    </lightning-card>
+   
+    
+    </template>

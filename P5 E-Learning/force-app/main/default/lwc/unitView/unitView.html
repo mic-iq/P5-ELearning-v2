@@ -1,0 +1,16 @@
+<template>
+    <lightning-card if:true={unit}>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:choice" size="small"></lightning-icon>
+             {unit.Name}
+
+             <lightning-icon icon-name={checkUnitIcon} size="x-small"></lightning-icon>
+        </h3>
+        <p class="slds-p-horizontal_small">Description: {unit.Description__c}</p>
+        <p class="slds-p-horizontal_small">Estimated Time: {unit.Time__c} minutes</p>
+        <p class="slds-p-horizontal_small">Module Points: {unit.Score__c} points</p>
+        <lightning-button variant="brand" label="Go to Unit" title="Go to Unit" onclick={handleToUnit} class="slds-m-left_x-small"></lightning-button>
+
+    </lightning-card>
+   
+</template>
