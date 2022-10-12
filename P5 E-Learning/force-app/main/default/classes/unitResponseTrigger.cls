@@ -64,6 +64,7 @@ private static void evaluateAnswers(List<Progress_Unit_Per_Response__c> progress
         }
 
         if(unitResp.Status__c == 'Success'){
+            unitResp.Stage__c = 'Completed';
             if(unitResp.Tries__c == 1){
                 unitResp.Score__c = unitRespFromDb.Unit__r.Score__c;  
 
